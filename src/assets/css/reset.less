@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+fieldset {
+    border: 0 none;
+    display: block;
+}
+
+body,
+html {
+    width: 100%;
+    // height: 100%;
+    // overflow: hidden;
+    font-family: "Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial,sans-serif";
+    color: #666;
+    background: #f7f7f7;
+}
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+em {
+    list-style: none;
+    color: #888;
+    font-size: 12px;
+    font-style: normal
+}
+#app{
+    font-size: 28px
+}
+::-webkit-scrollbar {
+    width: 5px;
+    /*滚动条宽度*/
+    height: 5px;
+    /*滚动条高度*/
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    /*滚动条的背景区域的圆角*/
+    background-color: #f7f7f7;
+    /*滚动条的背景颜色*/
+}
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    /*滚动条的圆角*/
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: rgb(218, 218, 218);
+    /*滚动条的背景颜色*/
+}
+
+/*路由切换动画——改变透明度*/
+
+.normal-enter {
+    opacity: 0;
+    z-index: 10000;
+}
+
+.normal-enter.normal-enter-active {
+    opacity: 1;
+    transition: all 0.4s ease-in;
+}
+
+.normal-leave {
+    opacity: 1;
+}
+
+.normal-leave.normal-leave-active {
+    opacity: 0;
+    transition: all .4s ease-out;
+}
+
+/*路由切换动画——左移动*/
+
+.left-enter {
+    position: absolute;
+    top: 0;
+    background: #fff;
+    z-index: 10000;
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+.left-enter.left-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.4s ease-out;
+}
+
+.left-leave {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.left-leave.left-leave-active {
+    opacity: 1;
+    transform: translateX(-100%);
+    transition: all 0.4s ease-out;
+}
+
+/*路由切换动画——右移动*/
+
+.right-enter {
+    transform: translateX(-100%);
+}
+
+.right-enter.right-enter-active {
+    transform: translateX(0);
+    transition: all 0.4s ease-out;
+}
+
+.right-leave {
+    position: absolute;
+    top: 0;
+    background: #fff;
+    z-index: 10000;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.right-leave.right-leave-active {
+    opacity: 1;
+    transform: translateX(100%);
+    transition: all 0.4s ease-out;
+}

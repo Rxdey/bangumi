@@ -1,0 +1,71 @@
+
+@import "../../assets/css/public.less";
+.animate {
+  &-list {
+    box-sizing: border-box
+  }
+  &-item {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background: #fff; // border: 1px solid #ddd
+    &:active{
+      background: #f7f7f7;
+    }
+  }
+  &__cover {
+    // width: 20vmin;
+    background: url('../../assets//img/notitle.png')no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    img.ignore {
+      // width: 100%
+      width: 75px;
+      height: 100px;
+    }
+  }
+  &__info {
+    flex: 1;
+    padding: 5px 10px 5px 20px;
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    &--left {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      .desc{
+        font-size: 24px;
+        color: #a7a6a6;
+        text-indent: 24px;
+      }
+    }
+    &--name {
+      font-size: 28px;
+      // margin-bottom: 10px;
+    }
+    &--score {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      font-size: 32px;
+      padding: 0 20px;
+      color: rgb(59, 183, 255)
+    }
+    .rank{
+      position: absolute;
+      bottom: 0;
+      right: 20px;
+      color: rgb(255, 136, 0);
+      font-size: 26px;
+    }
+  }
+}
+
+.small {
+  font-size: 26px;
+  color: #a7a6a6
+}

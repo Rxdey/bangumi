@@ -1,0 +1,36 @@
+@import '../../assets/css/public.less';
+.tab-list {
+  height: 80px;
+  line-height: 80px;
+  background: #fff;
+  position: relative;
+  font-size: 28px;
+  ul {
+    display: flex;
+    flex-flow: row;
+    .tab-item {
+      flex: 1;
+      font-size: 28px;
+      color: #333;
+      height: 100%;
+      &.active {
+        color: #f35b1f
+      }
+      .tab-content {
+        text-align: center;
+      }
+    }
+  }
+  .slide-bar {
+    position: absolute;
+    left: 0;
+    transition: 0.3s all;
+    bottom: 0;
+    .slide-line {
+      display: block;
+      background-color: #f35b1f; // width: 100px;
+      height: 6px;
+      margin: 0 auto;
+    }
+  }
+}
