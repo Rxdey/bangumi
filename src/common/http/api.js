@@ -1,4 +1,5 @@
-const HOST = "http://10.255.77.218:3000";
+// const HOST = "http://10.255.77.218:3000";
+const HOST = "http://localhost:3000";
 const serviceModule = {
   // 登录
   getList: {

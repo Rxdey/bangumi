@@ -34,8 +34,8 @@ class Tab extends React.Component {
     return (
       <div className="tab-list">
         <ul ref="tab">
-          {this.tabList.map((item, key) => <li className={this.props.active == key ? 'active tab-item' : 'tab-item'} onClick={this.tabActive.bind(this, key)} key={key}>
-            <div className="tab-content">
+          {this.tabList.map((item, key) => <li className={this.props.active == key ? 'active tab-item' : 'tab-item'} key={key}>
+            <div className="tab-content" onClick={this.tabActive.bind(this, key)}>
               {item.title}
             </div>
           </li>)}
@@ -49,7 +49,7 @@ class Tab extends React.Component {
 }
 Tab.defaultProps = {
   active: 0,
-  sliderBarWidth:'10vw',
+  sliderBarWidth:'9vw',
   tabChange:(key)=>{}
 }
 export default Tab

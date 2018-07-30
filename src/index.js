@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import http from './common/http/http.js'
 import api from './common/http/api.js'
-import './common/mock/mock.js';
+// import './common/mock/mock.js';
 import { Route, HashRouter as Router , Switch, Redirect} from 'react-router-dom';
 import { Provider } from 'react-redux'; 
 import store from './redux/store.js';

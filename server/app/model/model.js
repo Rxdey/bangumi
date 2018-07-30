@@ -58,7 +58,9 @@ const find = async ({
   pageSize = 10,
   type = 'asc'
 } = {}) => {
-  let sql = `SELECT a.*,b.animateInfo from animates a,animatedescs b WHERE a.animateId = b.animateId ORDER BY ${order} ${type} LIMIT ${start},${pageSize}`
+  let like = ` AND (a.animateNameCN like '%${search}%' or a.animateNameJP like '%${search}%')`
+  search?like:like = ''
+  let sql = `SELECT a.*,b.animateInfo from animates a,animatedescs b WHERE a.animateId = b.animateId${like} ORDER BY ${order} ${type} LIMIT ${start},${pageSize}`
   let list = await sequelize.query(sql, {
     raw: true,
     type: sequelize.QueryTypes.SELECT
